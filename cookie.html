@@ -1,0 +1,18 @@
+<!-- 
+ Работа с cookie JS
+-->
+
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+
+<script>
+$(document).ready(function(){
+	if($('#audioplayer').length > 0){
+		if($.cookie('com')){
+			$('#audioplayer').remove();
+		}
+		else{
+			$.cookie('com', true,{expires: 0.1});
+		}
+	}
+});
+</script>
